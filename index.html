@@ -3,11 +3,14 @@
 <head>
   <title>Chenfei Xiong</title>
   <link rel="icon" href="/media/paw.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body, html {
       height: 100%;
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      background-color: #F5A9F2;
     }
     .navbar {
       position: fixed;
@@ -23,12 +26,16 @@
     }
     .navbar a {
       color: #FFFFFF;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 30px;
       text-decoration: none;
       margin: 0 15px;
       cursor: pointer;
+      font-weight: bold;
     }
     .navbar a:hover {
-      text-decoration: underline;
+      text-decoration: double;
+      color: black;
     }
     .section {
       height: 100vh;
@@ -36,40 +43,133 @@
       padding: 20px;
       box-sizing: border-box;
     }
-    .about {
-        padding-top:50px;
-      background-color: #F5A9F2;
+    #about {
+      padding-top: 50px;
     }
-    .projects {
-      background-color: #DA81F5;
+    
+    .about-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .contact {
-      background-color: #E6E6E6;
+    
+    .about-content p {
+      
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      margin:0; /* Adjusted margin */
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
-    .section-header {
-      font-size: 36px;
+    .about-content h3 {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin:0; /* Adjusted margin */
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .about-content img {
+      margin-right: 0.5em;
+      height: 1.5em;
+      width: 1.5em;
+    }
+    
+    .about-content h2 {
+      color: #800080;
+      font-size: 2em;
+      margin-bottom: 2px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .program{
+      color: #800080;
+      font-size: 1.2em;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .skills div {
+      background-color: #DA81F5;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    #contact{
+      display: felx;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      height: 10px;
+      width: 20px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    ul {
+      font-size: 1.2em;
+    }
+    input {
+      height: 20px;
     }
   </style>
 </head>
 <body>
 
   <div class="navbar">
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 
   <div class="section about" id="about">
-    <div class="section-header">About Me</div>
-    <p>
-      Master's student major in software systems at University of Zurich.
-    </p>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+            I am a motivated master's student in Software Systems with a background in Engineering.
+             Passionate about full-stack software development, I thrive on innovative problem-solving. 
+             With a collaborative spirit and a love for learning, I seek impactful projects that combine my engineering expertise with cutting-edge technology.
+      </p>
+      <h2>Education</h2>
+      <h3>
+        <img src="./media/graduate.png" alt="graduation icon">
+        University of Zurich
+      </h3>
+      <div class="program">
+            Master of Science in Computer Science, 2022-present
+      </div>
+      <h3>
+        <img src="./media/graduate.png" alt="graduation icon">
+        Huazhong University of Science and Technology
+      </h3>
+      <div class="program">
+            Bachelor of Engineering in Material Science and Engineering, 2018-2022
+      </div>
+      <h2>Tech Skills</h2>
+      <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>React</div>
+        <div>Spring</div>
+        <div>JUnit</div>
+        <div>PostgreSQL</div>
+        <div>Git</div>
+        <!-- Add more skills as needed -->
+      </div>
+    </div>
   </div>
 
   <div class="section projects" id="projects">
-    <div class="section-header">Projects</div>
+    
     <p>
       Here are some of the projects I have worked on during my master's program:
       <ul>
@@ -81,10 +181,13 @@
   </div>
 
   <div class="section contact" id="contact">
-    <div class="section-header">Contact</div>
-    <p>
-      Feel free to reach out to me via email at <a href="mailto:youremail@example.com">youremail@example.com</a>.
-    </p>
+      <form action="https://formsubmit.co/your@email.com" method="POST">
+            <label for="">email</label>
+            <input type="email" name="email" required>
+            <label for="">message</label>
+            <input type="text" name="message" required>
+            <button type="submit">Send</button>
+       </form>
   </div>
 
   <script>
