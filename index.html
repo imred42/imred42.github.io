@@ -1,31 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>chenfei xiong</title>
-      <link rel="stylesheet" href="index.css">
-      <link rel="icon" href="/media/paw.png">
+  <title>Chenfei Xiong</title>
+  <link rel="icon" href="/media/paw.png">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      position: fixed;
+      height: 50px;
+      width: 100%;
+      background-color: #800080;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .navbar a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0 15px;
+      cursor: pointer;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .about {
+        padding-top:50px;
+      background-color: #F5A9F2;
+    }
+    .projects {
+      background-color: #DA81F5;
+    }
+    .contact {
+      background-color: #E6E6E6;
+    }
+    .section-header {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-      <header id="header">
-            <nav>
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
-            </nav>
-      </header>
-      
-      <div class="container">
-            <section id="home">
-                  Home
-            </section>
-            <section id="about">
-                  About
-            </section>
-            <section id="contact">
-                  Contact
-            </section>
-      </div>
+
+  <div class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="section about" id="about">
+    <div class="section-header">About Me</div>
+    <p>
+      Master's student major in software systems at University of Zurich.
+    </p>
+  </div>
+
+  <div class="section projects" id="projects">
+    <div class="section-header">Projects</div>
+    <p>
+      Here are some of the projects I have worked on during my master's program:
+      <ul>
+        <li>Project 1 - Description of project 1.</li>
+        <li>Project 2 - Description of project 2.</li>
+        <!-- Add more projects as needed -->
+      </ul>
+    </p>
+  </div>
+
+  <div class="section contact" id="contact">
+    <div class="section-header">Contact</div>
+    <p>
+      Feel free to reach out to me via email at <a href="mailto:youremail@example.com">youremail@example.com</a>.
+    </p>
+  </div>
+
+  <script>
+    // Smooth scrolling effect for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
