@@ -1,2 +1,2 @@
-# Portfolio - Chenfei Xiong
+# Portfolio
 https://imred42.github.io/
